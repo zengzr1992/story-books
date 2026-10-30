@@ -5,7 +5,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 out=Path(__file__).resolve().parents[1]/'artifacts'
 with sync_playwright() as p:
     browser=p.chromium.launch(executable_path=r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',headless=True)
-    page=browser.new_page(viewport={'width':390,'height':844})
+    page=browser.new_page(viewport={'width':390,'height':844},reduced_motion='reduce')
     errors=[]
     page.on('pageerror',lambda e:errors.append(str(e)))
     page.goto('http://localhost:4173')
@@ -17,7 +17,7 @@ with sync_playwright() as p:
     page.locator('#btn-language').click();page.locator('[data-lang="zh"]').click()
     page.locator('.shelf-book').click();page.locator('#btn-open').wait_for(state='visible',timeout=60000);page.locator('#btn-open').click()
     page.locator('#text-panel').wait_for(state='visible',timeout=20000)
-    page.locator('#mode-self').click();page.wait_for_timeout(1600)
+    page.wait_for_timeout(1600)
     expect(page.locator('#page-heading')).to_contain_text('窗')
     page.screenshot(path=str(out/'mobile-reading-zh.png'))
     page.set_viewport_size({'width':1280,'height':720})

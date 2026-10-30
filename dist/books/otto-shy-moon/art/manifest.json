@@ -1,0 +1,155 @@
+{
+ "cards": [
+  {
+   "id": "bedroom-wall",
+   "file": "bedroom-wall.jpg",
+   "width": 1600,
+   "height": 1194,
+   "cutout": false,
+   "copy": "Papering the bedroom wall\u2026",
+   "bytes": 433430,
+   "sha256": "cf249b99cabae9ab3d1ae2e98a3b073d45c7b948eea623a81741c7c1e90aaeaa"
+  },
+  {
+   "id": "bedroom-wall-moon",
+   "file": "bedroom-wall-moon.jpg",
+   "width": 1600,
+   "height": 1194,
+   "cutout": false,
+   "copy": "Hanging the moon in the window\u2026",
+   "bytes": 557393,
+   "sha256": "8a855cfe713f251b280ede65f295b1712c627441f38d34dda5e99d67a7eb08d0"
+  },
+  {
+   "id": "rooftops-sky",
+   "file": "rooftops-sky.jpg",
+   "width": 1600,
+   "height": 1194,
+   "cutout": false,
+   "copy": "Painting the rooftops\u2026",
+   "bytes": 463132,
+   "sha256": "a8833420ec30bc1c524a72e37b2ae3767c963fc613e0819ad8d0fb0fd4c0b530"
+  },
+  {
+   "id": "clouds-sky",
+   "file": "clouds-sky.jpg",
+   "width": 1600,
+   "height": 1194,
+   "cutout": false,
+   "copy": "Fluffing the clouds\u2026",
+   "bytes": 453822,
+   "sha256": "2a241718b65dd8cdb4723ec017f72f2a450400187ac607867cd4733a34fedada"
+  },
+  {
+   "id": "owl-forest",
+   "file": "owl-forest.jpg",
+   "width": 1600,
+   "height": 1194,
+   "cutout": false,
+   "copy": "Planting the forest\u2026",
+   "bytes": 582549,
+   "sha256": "8cd3c60df18348bb799cf4eb79f8932060218262a5f2249f759452029a94565c"
+  },
+  {
+   "id": "stars-sky",
+   "file": "stars-sky.jpg",
+   "width": 1600,
+   "height": 1194,
+   "cutout": false,
+   "copy": "Scattering the stars\u2026",
+   "bytes": 628315,
+   "sha256": "9eb7d3826ab0aae9a3aa8fb75350155ccb5b21b3c2bf51488a67c6877101fdfb"
+  },
+  {
+   "id": "bedroom-front",
+   "file": "bedroom-front.png",
+   "width": 1400,
+   "height": 913,
+   "cutout": true,
+   "copy": "Making the bed\u2026",
+   "bytes": 1748117,
+   "sha256": "2476cd4a3b3ae1b038829253ba23d2aea43116293860342e5625142e48d5ce13"
+  },
+  {
+   "id": "owl-tree",
+   "file": "owl-tree.png",
+   "width": 1054,
+   "height": 1400,
+   "cutout": true,
+   "copy": "Growing the tree\u2026",
+   "bytes": 2174004,
+   "sha256": "99d772eea2a8d35862c9ac012219392747a2d1b4f3ceea1d38fcca305c32ea23"
+  },
+  {
+   "id": "owl",
+   "file": "owl.png",
+   "width": 759,
+   "height": 900,
+   "cutout": true,
+   "copy": "Waking the owl\u2026",
+   "bytes": 1313679,
+   "sha256": "af4461b59f06a7aeae0e53dbb7a3f1b9569d544bcf7ec049acd928c308a392cd"
+  },
+  {
+   "id": "dark-cloud",
+   "file": "dark-cloud.png",
+   "width": 1200,
+   "height": 748,
+   "cutout": true,
+   "copy": "Darkening a cloud\u2026",
+   "bytes": 1306448,
+   "sha256": "c52073650b127a1dd5e5ce468e8d966412771c0b688738c4da7c72e58e794fec"
+  },
+  {
+   "id": "cat",
+   "file": "cat.png",
+   "width": 776,
+   "height": 900,
+   "cutout": true,
+   "copy": "Calling the cat\u2026",
+   "bytes": 952588,
+   "sha256": "1c2edbcdbe948fbd9c5065566ab04c174e9cda6183ad11d8e3a8aeaa430cbccd"
+  },
+  {
+   "id": "moon-face",
+   "file": "moon-face.png",
+   "width": 1084,
+   "height": 1100,
+   "cutout": true,
+   "copy": "Polishing the moon\u2026",
+   "bytes": 1818170,
+   "sha256": "ec0f52c9150936ce732f9323d5fcd349fa426dfc20fe8fd10343e4e45cc8b797"
+  },
+  {
+   "id": "cloud-a",
+   "file": "cloud-a.png",
+   "width": 665,
+   "height": 503,
+   "cutout": true,
+   "copy": "Fluffing a cloud\u2026",
+   "bytes": 418403,
+   "sha256": "558a35b2d01edfb0588f03058f08166fdae9d619681ed482c0eff7463544c49d"
+  },
+  {
+   "id": "cloud-sleepy",
+   "file": "cloud-sleepy.png",
+   "width": 827,
+   "height": 661,
+   "cutout": true,
+   "copy": "Fluffing a cloud\u2026",
+   "bytes": 698514,
+   "sha256": "5151958d85b6d2639fb57213b730a99f32fd5c7a68259cc26cb9db1aa1452fe9"
+  },
+  {
+   "id": "cloud-b",
+   "file": "cloud-b.png",
+   "width": 423,
+   "height": 331,
+   "cutout": true,
+   "copy": "Fluffing a cloud\u2026",
+   "bytes": 178155,
+   "sha256": "ef79519fbfa7d9daa08bf4cc9436d7e1848a92a2041d930368c085e38fca6b24"
+  }
+ ],
+ "provenance": "GPT Image 2 (Higgsfield) gouache picture-book illustrations; cutouts via the Higgsfield background remover; back cards resampled to 1600 wide JPEG, cutouts trimmed to their alpha bounds. Job ids in ../../public/ui/prompts.json and .cache/gen/scene-jobs.json."
+}

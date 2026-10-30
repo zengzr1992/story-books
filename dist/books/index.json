@@ -1,0 +1,50 @@
+{
+  "books": [
+    {
+      "id": "otto-shy-moon",
+      "title": "Otto and the Shy Moon",
+      "subtitle": "A bedtime story",
+      "blurb": "Otto floats up on his red balloon to find the moon and bring her back.",
+      "cover": "art/cover.jpg",
+      "spine": "#1b2450",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "moon",
+          "name": "Moon pin"
+        },
+        {
+          "id": "balloon",
+          "name": "Balloon pin"
+        },
+        {
+          "id": "owl",
+          "name": "Owl pin"
+        },
+        {
+          "id": "bear",
+          "name": "Otto pin"
+        },
+        {
+          "id": "star",
+          "name": "Star pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "zh": "奥托和害羞的月亮"
+      },
+      "blurbs": {
+        "zh": "奥托乘着红气球飞上天，去找月亮并把她带回来。"
+      },
+      "art": {
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "free"
+    }
+  ]
+}

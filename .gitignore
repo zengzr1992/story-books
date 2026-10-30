@@ -1,0 +1,8 @@
+node_modules/
+.site-workflow/
+artifacts/
+*.zip
+*.log
+.env
+.env.*
+!.env.example

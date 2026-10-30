@@ -1,0 +1,88 @@
+/* Keep the header's original position and responsive box in style.css. */
+.storycomet-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4%;
+  text-decoration: none;
+}
+
+.storycomet-logo > img {
+  display: block;
+  flex: none;
+  height: auto;
+}
+
+.storycomet-logo > .logo-symbol { width: 20%; }
+.storycomet-logo > .logo-wordmark { width: 76%; }
+
+.loading-brand {
+  width: min(360px, 64vw);
+  margin: 10px 0 24px;
+}
+
+#loading.book .loading-brand { display: none; }
+
+.pricing-brand.storycomet-logo {
+  width: 190px;
+  height: 44px;
+  flex: none;
+}
+
+@media (max-width: 600px) {
+  .pricing-brand.storycomet-logo { width: 150px; }
+}
+
+/* The other StoryComet bookshelf is one tap away, with the same parent account. */
+.app-switch.pill-button,
+.settings-app-switch.pill-button {
+  min-height: 58px;
+  padding: 8px 22px;
+  gap: 8px;
+  font-size: 17px;
+  text-decoration: none;
+  flex: none;
+  border-image-width: 29px;
+}
+.app-switch .icon,
+.settings-app-switch .icon { width: 24px; height: 24px; }
+.app-switch-arrow { font-size: 21px; line-height: 1; }
+.settings-app-switch.pill-button { display: none; }
+
+@media (max-width: 1400px) {
+  .progress-dots { top: 90px; }
+}
+@media (max-width: 1200px) {
+  .souvenir-chip { top: 90px; left: 22px; }
+  /* Keep the destination's book icon when a full label would crowd the header. */
+  .app-switch.pill-button {
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    gap: 0;
+    border-image: none;
+    background: url("/public/ui/round.png") center / 100% 100% no-repeat;
+  }
+  .app-switch > span { display: none; }
+}
+@media (max-width: 900px) {
+  .app-switch.pill-button { width: 48px; height: 48px; min-height: 48px; }
+}
+@media (max-width: 700px) {
+  /* The labeled destination lives at the top of Settings on phones. */
+  .app-switch.pill-button { display: none; }
+  .settings-app-switch.pill-button {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 18px;
+    padding: 8px 22px;
+    border-image-width: 24px;
+  }
+  .souvenir-chip { top: 68px; left: 0; right: 0; width: fit-content; margin: 0 auto; }
+  .progress-dots { top: 112px; }
+}
+@media (max-width: 360px) {
+  .brand { width: 54px; left: 8px; }
+  .top-actions { right: 8px; gap: 4px; }
+  .top-actions .round-button { width: 44px; height: 44px; }
+}

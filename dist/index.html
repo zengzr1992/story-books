@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<base href="/"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#141a33" name="theme-color"/>
+<title>StoryComet · Otto and the Shy Moon · 奥托和害羞的月亮</title>
+<link href="/public/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="public/fonts/fonts.css" rel="stylesheet"/>
+<link href="src/style.css" rel="stylesheet"/>
+<link href="src/account.css" rel="stylesheet"/>
+<link href="src/brand.css" rel="stylesheet"/>
+<link href="src/family.css" rel="stylesheet"/>
+<script src="src/account.js" type="module"></script>
+<script type="importmap">{
+  "imports": {
+    "three": "/vendor/three/build/three.module.js",
+    "three/addons/": "/vendor/three/examples/jsm/"
+  }
+}</script>
+<meta content="中英文立体互动绘本：奥托和害羞的月亮。朗读、探索、收藏和测验。" name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="StoryComet" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Otto and the Shy Moon · 奥托和害羞的月亮" property="og:title"/>
+<meta content="An interactive pop-up picture book in English and Chinese, with read-aloud narration and playful 3D scenes." property="og:description"/>
+<meta content="https://story-books-otto-zh-en.orangespoon2048.chatgpt.site/" property="og:url"/>
+<meta content="/public/social/storycomet-shelf.jpg" property="og:image"/>
+<meta content="/public/social/storycomet-shelf.jpg" property="og:image:secure_url"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="The StoryComet bookshelf with illustrated picture books and playful pop-up characters" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Otto and the Shy Moon · 奥托和害羞的月亮" name="twitter:title"/>
+<meta content="An interactive pop-up picture book in English and Chinese, with read-aloud narration and playful 3D scenes." name="twitter:description"/>
+<meta content="/public/social/storycomet-shelf.jpg" name="twitter:image"/>
+<meta content="The StoryComet bookshelf with illustrated picture books and playful pop-up characters" name="twitter:image:alt"/>
+</head>
+<body>
+<button aria-haspopup="dialog" class="account-open" id="account-open">Parent account</button>
+<dialog aria-labelledby="account-title" class="panel-shell folio-dialog" id="account-dialog"></dialog>
+<div id="app">
+<canvas aria-label="Otto and the Shy Moon, a pop-up book" id="gl" tabindex="0"></canvas>
+<div hidden="" id="focus-veil"></div>
+<div hidden="" id="interface">
+<a aria-label="Story Comet home" class="brand storycomet-logo hud" href="#" style="--i: 0">
+<img alt="" class="logo-symbol" height="200" src="/public/brand/storycomet-symbol.png" width="256"/>
+<img alt="" class="logo-wordmark" height="120" src="/public/brand/storycomet-wordmark.png" width="800"/>
+</a>
+<div aria-label="Reading progress" class="progress-dots hud" id="dots" role="group" style="--i: 1"></div>
+<div class="top-actions">
+<button aria-label="Sound on or off" class="round-button hud" data-i18n-aria="ariaSound" data-i18n-tip="tipSound" data-tip="Sound" id="btn-sound" style="--i: 2">
+<i class="icon icon-sound"></i>
+</button>
+<button aria-label="Look closer" class="round-button hud" data-i18n-aria="tipLook" data-i18n-tip="tipLook" data-tip="Look closer" id="btn-look" style="--i: 3">
+<i class="icon icon-look"></i>
+</button>
+<button aria-label="Language" class="round-button hud lang-button" data-i18n-aria="tipLanguage" data-i18n-tip="tipLanguage" data-tip="Language" id="btn-language" style="--i: 4">
+<img alt="" class="flag" src="/public/ui/flags/en.png"/>
+</button>
+<button aria-label="Profiles" class="round-button hud account-button" data-i18n-aria="tipProfiles" data-i18n-tip="tipProfiles" data-tip="Profiles" id="btn-account" style="--i: 5">
+<i class="icon icon-account"></i>
+<img alt="" class="avatar" hidden=""/>
+<i aria-hidden="true" class="pro-pin"></i>
+</button>
+<button aria-label="Settings" class="round-button hud" data-i18n-aria="tipSettings" data-i18n-tip="tipSettings" data-tip="Settings" id="btn-settings" style="--i: 6">
+<i class="icon icon-settings"></i>
+</button>
+</div>
+<div aria-label="Read in" class="language-menu" data-i18n-aria="ariaReadIn" hidden="" id="language-menu" role="menu">
+<button data-lang="en" role="menuitemradio"><img alt="" class="flag" src="/public/ui/flags/en.png"/><span>English</span></button>
+<button data-lang="zh" role="menuitemradio"><img alt="" class="flag" src="/public/ui/flags/zh.png"/><span>中文</span></button>
+</div>
+<div class="shelf-strip" hidden="" id="shelf-strip">
+<div class="shelf-heading"><span class="shelf-title" data-i18n="pickBook">Pick a book</span><a class="sr-only" data-i18n="pickBook" href="#">All stories</a></div>
+<div class="shelf-row">
+<button aria-label="Previous books" class="shelf-nav" data-i18n-aria="ariaPrevBooks" data-i18n-title="ariaPrevBooks" id="shelf-prev" title="Previous books">‹</button>
+<div class="shelf-books"></div>
+<button aria-label="Next books" class="shelf-nav" data-i18n-aria="ariaNextBooks" data-i18n-title="ariaNextBooks" id="shelf-next" title="Next books">›</button>
+</div>
+<div aria-hidden="true" class="shelf-dots"></div>
+</div>
+<section aria-live="polite" class="text-panel hud" hidden="" id="text-panel" style="--i: 2">
+<i aria-hidden="true" class="corner tl"></i>
+<i aria-hidden="true" class="corner br"></i>
+<div class="text-panel-inner">
+<span class="page-eyebrow" id="page-eyebrow">Page 1</span>
+<h2 class="page-heading" id="page-heading">The dark window</h2>
+<p class="page-words" id="page-words"></p>
+<div class="page-foot">
+<span class="page-hint" id="page-hint"></span>
+<span class="zoom-hint" data-i18n="tapWords">tap the words to hear them · tap the card to zoom</span>
+<button class="read-done" hidden="" id="read-done" type="button"><i aria-hidden="true" class="star"></i><span data-i18n="iReadIt">I read it!</span></button>
+</div>
+</div>
+</section>
+<div class="word-zoom" hidden="" id="word-zoom"><img alt="" hidden=""/><span class="zoom-label"></span></div>
+<div aria-label="Hear the word again" class="vocab-card" data-i18n-aria="ariaHearAgain" hidden="" id="vocab-card" role="button">
+<img alt="" hidden=""/>
+<div class="vocab-text">
+<span class="vocab-script"></span>
+<span class="vocab-roman"></span>
+<span class="vocab-meaning"></span>
+<small class="vocab-note"></small>
+<small class="vocab-lang"></small>
+</div>
+</div>
+<div class="hint-card hud" hidden="" id="hint" style="--i: 6">
+<i class="icon icon-hand"></i>
+<p id="hint-text"></p>
+</div>
+<section aria-label="Story quiz" class="quiz" data-i18n-aria="ariaQuiz" hidden="" id="quiz"></section>
+<div class="reader-bar hud" id="reader-bar" style="--i: 5">
+<button aria-label="Previous page" class="round-button big" data-i18n-aria="ariaPrev" data-i18n-tip="tipBack" data-tip="Back" id="btn-prev">
+<i class="icon icon-back"></i>
+</button>
+<div class="reader-center">
+<button aria-label="Quiz time" class="pill-button quiz-pill" data-i18n-aria="quizTime" hidden="" id="btn-quiz">
+<i class="icon icon-star"></i><span data-i18n="quizTime">Quiz time!</span></button>
+<button aria-label="Phrasebook" class="pill-button small phrase-pill" data-i18n-aria="ariaPhrasebook" hidden="" id="btn-phrasebook">
+<i class="icon icon-abc"></i><span data-i18n="words">Words</span></button>
+<button aria-label="Read to me" class="pill-button primary" id="btn-read">
+<i class="icon icon-play"></i><span data-i18n="readToMe">Read to me</span>
+</button>
+<div aria-label="Reading mode" class="mode-toggle" data-i18n-aria="ariaMode" role="group">
+<button aria-label="Close the book and go back to the shelf" class="pill-button small close-pill" data-i18n-aria="ariaClose" id="btn-close-book">
+<i class="icon icon-home"></i><span data-i18n="closeBook">Close book</span>
+</button>
+<button aria-pressed="true" class="pill-button small" id="mode-listen">
+<i class="icon icon-listen"></i><span data-i18n="readToMe">Read to me</span>
+</button>
+<button aria-pressed="false" class="pill-button small" id="mode-self">
+<i class="icon icon-abc"></i><span data-i18n="illRead">I'll read</span>
+</button>
+</div>
+</div>
+<button aria-label="Next page" class="round-button big" data-i18n-aria="ariaNext" data-i18n-tip="tipNext" data-tip="Next" id="btn-next">
+<i class="icon icon-next"></i>
+</button>
+</div>
+<div class="word-tip" hidden="" id="word-tip"><span></span></div>
+<div class="magic-word" hidden="" id="magic-word"><span></span></div>
+</div>
+<div id="loading">
+<div aria-hidden="true" class="loading-sky">
+<canvas class="loading-night" id="loading-night"></canvas>
+<canvas aria-hidden="true" class="loading-night loading-comets" id="loading-comets"></canvas>
+<div class="loading-veil"></div>
+<div class="loading-moon"><img alt="" id="loading-moon-art"/></div>
+<div class="loading-stars"></div>
+</div>
+<section aria-label="Opening the book" class="loading-card" id="loading-card">
+<i aria-hidden="true" class="corner tl"></i>
+<i aria-hidden="true" class="corner tr"></i>
+<i aria-hidden="true" class="corner bl"></i>
+<i aria-hidden="true" class="corner br"></i>
+<span class="eyebrow" data-i18n="eyebrow">A STORYCOMET POP-UP BOOK</span>
+<h1>
+<span aria-label="Story Comet" class="storycomet-logo loading-brand" role="img">
+<img alt="" class="logo-symbol" height="200" src="/public/brand/storycomet-symbol.png" width="256"/>
+<img alt="" class="logo-wordmark" height="120" src="/public/brand/storycomet-wordmark.png" width="800"/>
+</span>
+<img alt="" class="loading-logo" height="942" hidden="" id="loading-logo" width="1400"/>
+<i aria-hidden="true" class="quill">🪶</i>
+</h1>
+<p class="loading-blurb" id="loading-blurb">
+            Pop-up stories that read themselves aloud, light up every word, and jump out of the page when you touch them.
+            <i aria-hidden="true" class="quill">🪶</i>
+</p>
+<div aria-label="Loading the book" class="loading-progress" role="progressbar"><i></i></div>
+<p aria-live="polite" id="loading-copy" role="status">Fluffing the clouds…</p>
+<p aria-hidden="true" class="loading-bytes" id="loading-bytes"></p>
+<button class="pill-button primary" hidden="" id="btn-open">
+<i class="icon icon-book"></i><span data-i18n="openBook">Open the book</span>
+</button>
+<button class="pill-button small" hidden="" id="btn-back">
+<i class="icon icon-book"></i><span data-i18n="backToShelf">Back to the shelf</span>
+</button>
+<div class="loading-footnote" data-i18n="footnote">Best with sound on · Touch everything</div>
+</section>
+</div>
+<div hidden="" id="panel"></div>
+<div class="board" hidden="" id="souvenirs"></div>
+<div aria-live="polite" id="toast" role="status"></div>
+<div hidden="" id="tooltip" role="tooltip"></div>
+</div>
+<script src="src/main.js" type="module"></script>
+</body>
+</html>

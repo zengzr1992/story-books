@@ -1,0 +1,7 @@
+{
+  "folder": "words/cards",
+  "format": "jpg",
+  "mode": "GPT Image 2 via Higgsfield, seven 3x3 sheets of word cards split by their white gutters (sheets/ keeps the originals; tools in the repo root notes)",
+  "cards": ["sleep","looked","sky","dark","said","where","found","big","red","held","tight","up","went","night","floated","glowed","little","lamps","meow","here","soft","cool","sleepy","yawned","puffed","tall","blinked","round","hoo","hiding","shy","tonight","follow","twinkle","across","ended","peeked","behind","small","pale","hello","whispered","missed","smiled","whole","bright","thank","light","way","home","down","past","climbed","warm","shone","goodnight","read","story","asleep","moon","owl","cat","balloon"],
+  "jobs": ["c6e6effb-8b5f-43ac-8f84-e5a1bad30307","da792d05-acde-4416-91d1-f8cacdbb35d6","8a1a955e-2f3c-4d42-9c9f-74d0cc194728","282517f7-335c-4771-b865-6015609f0640","01ddb1d5-6c98-4b12-9a78-94b6b293793d","1d90fa3f-91b2-410c-ae71-8df732c43ea8","93f3b507-9719-4321-9c0a-647dae594709"]
+}

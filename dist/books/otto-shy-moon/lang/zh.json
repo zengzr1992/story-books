@@ -1,0 +1,152 @@
+{
+  "language": "zh",
+  "title": "奥托和害羞的月亮",
+  "blurb": "奥托乘着红气球飞上天，去找月亮并把她带回来。",
+  "pages": [
+    {
+      "heading": "黑黑的窗户",
+      "hint": "点一点台灯。 点一点积木。 月亮去哪儿了？",
+      "text": "{奥托:otto} {睡不着:otto/sleep}。 他 {望着:otto/look} {窗外:window}。 {天空:window/night} {黑黑的:window/dark}。 “{月亮:window} 在哪里？” {奥托:otto} 说。"
+    },
+    {
+      "heading": "红气球",
+      "hint": "拖一拖气球， 然后放开它。",
+      "text": "{奥托:otto} {找到了:balloon} 他的 {大:balloon} {红:balloon} {气球:balloon}。 他 {紧紧地:otto/held} {抓住:otto/held}。 {飞呀:otto/up}， {飞呀:otto/up}， {飞呀:otto/up}， {奥托:otto} 飞起来了！ {飞出:otto/out} {窗户:window/out}， 飞进 {夜里:wall/night}。"
+    },
+    {
+      "heading": "飞过屋顶",
+      "hint": "点一点窗户， 把灯点亮。 跟小猫打个招呼。",
+      "text": "{奥托:otto} {飘过:otto/float} {屋顶:town}。 {窗户:town/glow} {亮着:town/glow}， 像一盏盏 {小灯:town/glow}。 {烟囱:chimney} 上的 {小猫:cat} 说： “{喵:cat/meow}。 月亮 不在这里。”"
+    },
+    {
+      "heading": "飞进云里",
+      "hint": "戳一戳云朵。 有一朵云 很想睡觉。",
+      "text": "{奥托:otto} {飘进:otto/float} {云里:clouds}。 云朵 {软软的:clouds}， {凉凉的:cloud2}。 一朵 {想睡觉的:sleepy} {云:sleepy} {打了个哈欠:sleepy/yawn}。 “月亮 不在这里，” 它 {呼地:sleepy/puff} 说。"
+    },
+    {
+      "heading": "猫头鹰",
+      "hint": "猫头鹰 在看你呢。 点一点它， 听它叫。",
+      "text": "{奥托:otto} {飘到:otto/float} 一棵 {高高的:tree/tall}， {高高的:tree/tall} {树:tree} 上。 一只 {猫头鹰:owl} {眨了眨:owl/blink} 她 {又大:eyes} {又圆:eyes} 的 {眼睛:eyes}。 “{咕:owl/hoo}！ 月亮 躲起来了，” 她说。 “今晚 她 有点害羞。”"
+    },
+    {
+      "heading": "跟着星星走",
+      "hint": "把星星 一颗一颗 点亮， 照出小路。",
+      "text": "“{跟着:otto/float} {星星:stars} 走，” {猫头鹰:owl} 说。 {奥托:otto} 就跟着走。 {一闪:stars/twinkle}， {一闪:stars/twinkle}， {一闪:stars/twinkle}。 {星星:stars} 在 {天空:sky} 中 铺出了 一条 {小路:stars}。"
+    },
+    {
+      "heading": "云朵后面",
+      "hint": "把大云朵 推开， 找一找月亮。",
+      "text": "小路 的 尽头 是一朵 {又大:cloud} {又黑:cloud} 的 {云:cloud}。 {奥托:otto} {往后面:cloud/behind} {偷偷看:otto/peek}。 {月亮:moon} 在那里！ 她 {小小的:moon}， {淡淡的:moon/pale}， 正 {躲着:moon/hide} 呢。"
+    },
+    {
+      "heading": "你好，月亮",
+      "hint": "把手 靠近月亮， 看她 发光。",
+      "text": "“{你好:otto/wave}， {月亮:moon}，” {奥托:otto} {轻轻地说:otto/whisper}。 “我 {想你:moon/smile} 了。” {月亮:moon} {笑了:moon/smile}。 她 {亮了:moon/glow}， {亮了:moon/glow}， {越来越亮:moon/glow}， 整个 {天空:sky} 都 {亮起来了:sky/bright}。"
+    },
+    {
+      "heading": "往下，往下，往下",
+      "hint": "你遇到的 朋友 都在这里。 能全部 找到吗？",
+      "text": "“{谢谢:moon/smile} 你， {奥托:otto}，” {月亮:moon} 说。 “我来 {照亮:moon/glow} 你 {回家:otto/down} 的 {路:moon}。” {往下:otto/down}， {往下:otto/down}， {往下:otto/down}， {奥托:otto} 飘下去了。 经过 {星星:stars/twinkle}。 经过 {猫头鹰:owl}。 经过 {云朵:clouds}。"
+    },
+    {
+      "heading": "晚安",
+      "hint": "关掉台灯。 做个好梦。",
+      "text": "{奥托:otto} {爬进:otto/climb} 他 {暖暖的:bed/warm} {床:bed}。 {月亮:moon} 在 {窗口:window/glow} {发着光:moon/glow}。 “{晚安:otto/wave}， {月亮:moon}，” {奥托:otto} 说。 “晚安， {奥托:otto}，” {月亮:moon} 说。 然后 他们俩 都 {睡着了:otto/sleep}。"
+    }
+  ],
+  "end": {
+    "heading": "完",
+    "text": "你 {读完了:read} 整个 {故事:story}。 {奥托:otto} {睡着了:otto/sleep}， {月亮:moon} 再也 不 {害羞:moon/smile} 了。",
+    "prompt": "要是 月亮 不见了， 你会 怎么办？"
+  },
+  "magic": {
+    "path": "星星 在天空中 铺出了 一条小路！",
+    "moon": "她在那儿！ 害羞的 月亮 躲起来了。",
+    "glow": "月亮 亮了， 亮了， 越来越亮。",
+    "sleep": "晚安， 奥托。 晚安， 月亮。"
+  },
+  "quiz": {
+    "questions": [
+      {
+        "q": "这个 故事的 主角 是谁？",
+        "options": [
+          "奥托",
+          "猫头鹰",
+          "小猫"
+        ],
+        "right": "对了！ 小熊 奥托 是主角。",
+        "wrong": "不太对。 猫头鹰 和 小猫 是奥托的 朋友。 主角 是小熊 奥托。"
+      },
+      {
+        "q": "奥托 抓着什么 飞上了天？",
+        "options": [
+          "气球",
+          "小灯",
+          "月亮"
+        ],
+        "right": "答对了！ 奥托 紧紧抓着 他的 大红气球， 飞呀， 飞呀， 飞呀。",
+        "wrong": "嗯， 不是那个。 奥托 抓着 他的 大红气球， 气球 带着他 飞进了 夜里。"
+      },
+      {
+        "q": "谁 害羞地 躲在 云朵后面？",
+        "options": [
+          "月亮",
+          "猫头鹰",
+          "小猫"
+        ],
+        "right": "对了！ 害羞的 月亮 躲起来了。 奥托 找到了她， 把她 带回了家。",
+        "wrong": "不太对。 是害羞的 月亮 躲在 云朵后面。 奥托 跟她 打招呼， 她就 笑了。"
+      },
+      {
+        "q": "是谁让奥托跟着星星走的？",
+        "options": [
+          "猫头鹰",
+          "小猫",
+          "月亮"
+        ],
+        "right": "对啦！猫头鹰说“跟着星星走”，星星在天上铺出了一条路。",
+        "wrong": "不太对。小猫说月亮不在这儿，月亮在躲着呢。让奥托跟着星星走的是猫头鹰。"
+      },
+      {
+        "q": "月亮是怎么帮奥托回家的？",
+        "options": [
+          "她发出了光",
+          "她打了个哈欠",
+          "她喵了一声"
+        ],
+        "right": "对啦！月亮发出光，照亮了奥托回家的路，一路穿过星星。",
+        "wrong": "不太对。打哈欠的是云，喵喵叫的是小猫。月亮发出光，照亮了奥托回家的路。"
+      }
+    ]
+  },
+  "labels": {
+    "Otto": "奥托",
+    "balloon": "气球",
+    "bed": "床",
+    "blocks": "积木",
+    "boat": "船",
+    "bunting": "三角旗",
+    "cat": "小猫",
+    "chimney": "烟囱",
+    "cloud": "云",
+    "cloud2": "云",
+    "clouds": "云朵",
+    "eyes": "眼睛",
+    "furniture": "家具",
+    "lamp": "小灯",
+    "moon": "月亮",
+    "nightstand": "床头柜",
+    "otto": "奥托",
+    "owl": "猫头鹰",
+    "path": "小路",
+    "rooftops": "屋顶",
+    "shelf": "架子",
+    "star": "星星",
+    "stars": "星星",
+    "table": "桌子",
+    "town": "小镇",
+    "tree": "树",
+    "wall": "墙",
+    "window": "窗户"
+  }
+}

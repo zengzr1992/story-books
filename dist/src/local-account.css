@@ -1,0 +1,23 @@
+.local-reading-account .local-reading-state {
+  display: flex; justify-content: center; align-items: center; gap: 9px;
+  margin: 6px 0 16px; color: #78603f; font-size: 14px; overflow-wrap: anywhere;
+}
+.local-reading-account .local-reading-state .icon { width: 22px; height: 22px; flex-shrink: 0; }
+.local-reading-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.local-reading-stats > div {
+  display: grid; justify-items: center; gap: 7px; padding: 15px 7px;
+  border: 1px solid #c8aa6b66; border-radius: 15px; background: #fffaf088;
+}
+.local-reading-stats .icon { width: 28px; height: 28px; }
+.local-reading-stats strong { font-size: 26px; line-height: 1; color: #764a23; }
+.local-reading-stats span { font-size: 12px; color: #886b43; text-align: center; }
+.local-reading-account .local-reading-actions { flex-wrap: wrap; margin-top: 20px; gap: 12px; }
+.local-reading-account .local-reading-note { margin: 0; color: #8b704f; font-size: 13px; text-align: center; line-height: 1.7; }
+.local-reading-account .local-cloud-status { color: #887044; font-size: 13px; text-align: center; margin: 0 0 16px; }
+.local-reading-account .local-cloud-form { margin-top: 18px; }
+.local-reading-account .local-cloud-form small { color: #8b704f; font-size: 12px; }
+@media (max-width: 480px) {
+  .local-reading-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .local-reading-stats > div { padding: 12px 7px; }
+  .local-reading-account .local-reading-actions .pill-button { width: 100%; }
+}
